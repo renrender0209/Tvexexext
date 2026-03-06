@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: googlevideo-api
+    env: docker
+    region: oregon
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
